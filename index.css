@@ -1,20 +1,15 @@
-body {
-    margin: 0 auto;
-    text-align: center;
-    background-color: #1B244A ;
-    max-width: 575px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+/* Typograpahy */
 
 @font-face {
      font-family: CursedTimer;
      src: url(/CursedTimerUlil-Aznm.ttf);
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1,
+h2,
+h3,
+p{
+    margin: 0;
 }
 
 h3{
@@ -22,9 +17,44 @@ h3{
     font-size: 40px;
     font-weight: 700;
     line-height: 36px;
-    letter-spacing: 0%;
-    margin: 20px 0px 0px;
 }
+
+/* LAYOUT */
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1B244A ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem; 
+}
+
+.score-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;;
+}
+
+.increment-container{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem; 
+}
+
+
+/* SCORE CARDs */
 
 .score{
     background-color: #080001;
@@ -32,23 +62,16 @@ h3{
     font-size: 90px;
     font-family: CursedTimer;
     line-height: 127px;
-    width: 155px;
-    margin: 21px 50px 26px;
+    min-width: 155px;
     border-radius: 5px;
-    padding: 0px 6px;
 }
 
-.increment-el{
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-}
+/* Buttons */
 
 .increment-btn{
-    margin: 0px 4px;
     background-color: #1B244A;
-    width: 45px;
-    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
     box-shadow: 0px 0px 2px #9AABD8;
     border: 2px solid #9AABD8;
     border-radius: 5px;
@@ -59,7 +82,7 @@ h3{
 }
 
 #new-game{
-    margin: 25px 0px;
+    margin: 1rem 0;
     background-color: #1B244A;
     padding: 5px 10px;
     border: 2px solid #9AABD8;
