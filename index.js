@@ -1,6 +1,6 @@
 const homeScore = document.getElementById("home-score")
 const guestScore = document.getElementById("guest-score") 
-const incrementBtn = document.querySelector("#increment-btn")
+const incrementBtn = document.querySelectorAll(".increment-btn")
 const newGameBtn = document.querySelector("#new-game")
 
 let homeCount = 0
@@ -19,10 +19,10 @@ const updateWinningTeam = () => {
     }
 }
 
-const addPoints = () => {
+const addPoints = (e) => {
 
-    const team = incrementBtn.name
-    const points = parseInt(incrementBtn.value, 10)
+    const team = e.target.name
+    const points = parseInt(e.target.value, 10)
 
     switch (team){
         case "home":
@@ -45,5 +45,9 @@ const newGame = () => {
     updateWinningTeam()
 }
 
-incrementBtn.addEventListener('click', addPoints)
+
+for (btn of incrementBtn){
+    btn.addEventListener('click', addPoints)
+}
+
 newGameBtn.addEventListener('click', newGame)
